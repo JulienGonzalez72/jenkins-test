@@ -1,5 +1,9 @@
 import org.json.JSONObject;
 
+/**
+ * Represents a person.
+ * @author Julien Gonzalez
+ */
 public class Person {
 	
 	private String firstName, familyName;
