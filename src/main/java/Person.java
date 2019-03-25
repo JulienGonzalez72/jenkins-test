@@ -19,6 +19,10 @@ public class Person {
 		age++;
 	}
 	
+	public void grow(int years) {
+		age += years;
+	}
+	
 	@Override
 	public String toString() {
 		return firstName + " " + familyName + " (" + age + " ans)";
@@ -31,27 +35,27 @@ public class Person {
 		json.put("age", age);
 		return json;
 	}
-
+	
 	public String getFirstName() {
 		return firstName;
 	}
-
+	
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
-
+	
 	public String getFamilyName() {
 		return familyName;
 	}
-
+	
 	public void setFamilyName(String familyName) {
 		this.familyName = familyName;
 	}
-
+	
 	public int getAge() {
 		return age;
 	}
-
+	
 	public void setAge(int age) {
 		this.age = age;
 	}
