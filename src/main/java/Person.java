@@ -20,6 +20,9 @@ public class Person {
 	}
 	
 	public void grow(int years) {
+		if (years < 0) {
+			throw new IllegalArgumentException("years must be positive or null !");
+		}
 		age += years;
 	}
 	
