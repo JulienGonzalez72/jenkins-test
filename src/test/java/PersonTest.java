@@ -18,6 +18,12 @@ class PersonTest {
 		assertEquals(21, person.getAge());
 	}
 	
+	@Test
+	void testGrowMultiple() throws Exception {
+		person.grow(17);
+		assertEquals(37, person.getAge());
+	}
+	
 	//@Test
 	void testFail() {
 		person.grow();
