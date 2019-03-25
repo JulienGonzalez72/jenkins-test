@@ -1,5 +1,6 @@
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.json.JSONObject;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -22,6 +23,14 @@ class PersonTest {
 	void testGrowMultiple() throws Exception {
 		person.grow(17);
 		assertEquals(37, person.getAge());
+	}
+	
+	@Test
+	void testJSON() throws Exception {
+		JSONObject json = person.toJSON();
+		assertTrue(json.has("firstName"));
+		assertTrue(json.has("familyName"));
+		assertTrue(json.has("age"));
 	}
 	
 	//@Test
