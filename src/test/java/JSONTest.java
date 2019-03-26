@@ -8,7 +8,7 @@ class JSONTest {
 	@Test
 	void testParse() {
 		Person p = new Person("Roman", "Diez", 19);
-		JSONObject json = p.toJSON();
+		JSONObject json = JSONTransformer.toJSON(p);
 		Person p2 = JSONTransformer.parse(new Person(null, null, 0), json);
 		assertEquals(p.getFirstName(), p2.getFirstName());
 		assertEquals(p.getFamilyName(), p2.getFamilyName());

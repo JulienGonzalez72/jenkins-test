@@ -1,5 +1,3 @@
-import org.json.JSONObject;
-
 /**
  * Represents a person.
  * @author Julien Gonzalez
@@ -29,14 +27,6 @@ public class Person {
 	@Override
 	public String toString() {
 		return firstName + " " + familyName + " (" + age + " ans)";
-	}
-	
-	public JSONObject toJSON() {
-		JSONObject json = new JSONObject();
-		json.put("firstName", firstName);
-		json.put("familyName", familyName);
-		json.put("age", age);
-		return json;
 	}
 	
 	public String getFirstName() {
